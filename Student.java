@@ -3,7 +3,8 @@ class Student {
 	String firstName;
 	String lastName;
 	String[] grades;
-
+	int n;
+	
 	//TODO constructor
 	public Student(String index,String firstName, String lastName){
 			this.index=index;
@@ -34,9 +35,24 @@ class Student {
 
 	public double getAverage() {
 		//TODO
+		int average;
+		int sum=0;
+		
+		
+		for(int i=0;i<n;i++) {
+			sum+=grades[i];
+		}
+		average=sum/n;
+		return average;
 	}
 
 	public int ECTSCredits() {
 		//TODO
+		int ekts;
+		for(int i=0;i<n;i++)
+		{
+			ekts*=6;
+		}
+		return ekts;
 	}
 }
